@@ -1,0 +1,13 @@
+.nav flex-column>.active>a {
+            background-color: #C0C0C0;
+            color: green;
+        }
+ul.nav.flex-column {
+}
+#navinfo {
+            border-right-color: blue;
+}
+#navnotes {
+}
+li.nav-item {
+}

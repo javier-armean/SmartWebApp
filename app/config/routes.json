@@ -1,0 +1,9 @@
+{
+  "routes": [
+    {
+      "path": "/JT1",
+      "page": "JT1",
+      "layout": "Main"
+    }
+  ]
+}

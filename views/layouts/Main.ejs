@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="ac:route" content="/JT1">
+  <base href="/">
+  <script src="dmxAppConnect/dmxAppConnect.js"></script>
+  <meta charset="UTF-8">
+  <title>Untitled Document</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="bootstrap/5/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/bootstrap-icons.css" />
+  <script src="dmxAppConnect/dmxRouting/dmxRouting.js" defer=""></script>
+  <script src="dmxAppConnect/dmxBootstrap5Navigation/dmxBootstrap5Navigation.js" defer=""></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="dmxAppConnect/dmxDatastore/dmxDatastore.js" defer=""></script>
+  <script src="dmxAppConnect/dmxFormatter/dmxFormatter.js" defer=""></script>
+  <script src="dmxAppConnect/dmxStateManagement/dmxStateManagement.js" defer=""></script>
+  <script src="dmxAppConnect/dmxTyped/dmxTyped.js" defer=""></script>
+  <script src="dmxAppConnect/dmxTyped/typed.min.js" defer=""></script>
+  <link rel="stylesheet" href="fontawesome5/css/all.min.css" />
+  <link rel="stylesheet" href="dmxAppConnect/dmxAnimateCSS/animate.min.css" />
+  <script src="dmxAppConnect/dmxAnimateCSS/dmxAnimateCSS.js" defer=""></script>
+</head>
+
+<body is="dmx-app" id="Main">
+
+
+
+  <dmx-value id="nav_state"></dmx-value>
+
+  <div is="dmx-view" id="content">
+    <%- await include(content, locals); %>
+  </div>
+
+
+  <div class="container-fluid px-0">
+    <div class="row">
+
+
+      <div class="col-xl-1 col-4">
+      </div>
+      <div class="col col d-flex justify-content-start align-items-center" id="video_rating_col">
+        <p><b>Rate this session</b></p>
+        <%- await include('/partials/video-rating', Object.assign({}, locals)) %>
+      </div>
+      <div class="col col d-flex justify-content-start flex-row align-items-center" id="video_sharing_col">
+        <p><b>Share</b></p>
+        <%- await include('/partials/video-sharing', Object.assign({}, locals)) %>
+      </div>
+
+
+      <div class="col 11 d-flex"></div>
+    </div>
+    <div class="row">
+
+
+      <div class="col-xl-1 col-4" id="nav_bar_col">
+        <ul class="nav flex-column nav-pills nav-flush;">
+          <li class="nav-item">
+            <a class="nav-link text-start" style="cursor: pointer;" data-bs-toggle="tab" id="navinfo" dmx-on:click="nav_state.setValue(1)" internal="" href="/JT1" data-bs-target="#video_content_tab.1" aria-current="Page"><i class="bi-info-circle"
+                id="nav-icon"></i>&nbsp;Info</a>
+          </li>
+          <li class="nav-item" style="">
+            <a class="nav-link" id="navnotes" dmx-on:click="nav_state.setValue(2)" internal="" href="/JT1" data-bs-toggle="tab" data-bs-target="#video_content_tab.2"><i class="bi-journal-bookmark-fill"></i>&nbsp;Notes
+
+
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="cursor: pointer;" id="navdownloads" dmx-on:click="nav_state.setValue(3)" internal="" href="/JT1" data-bs-toggle="tab" data-bs-target="#video_content_tab.3"><i class="bi-file-earmark-image"></i>&nbsp;Downloads
+
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="navassignments" dmx-on:click="nav_state.setValue(4)" internal="" href="/JT1" data-bs-toggle="tab" data-bs-target="#video_content_tab.4"><i class="bi-pencil-square"></i>&nbsp;Assignments
+
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col col d-flex justify-content-start flex-row align-items-center" id="video_content_col">
+        <div class="tab-content" id="video_content_tab">
+          <div class="tab-pane fade show active" id="video_content_tab.1" role="tabpanel">
+            <%- await include('/partials/video-content', Object.assign({}, locals)) %></div>
+          <div class="tab-pane fade" id="video_content_tab.2" role="tabpanel">
+            <p>Ad pariatur nostrud pariatur exercitation ipsum ipsum culpa mollit commodo mollit ex. Aute sunt incididunt amet commodo est sint nisi deserunt pariatur do. Aliquip ex eiusmod voluptate exercitation cillum id incididunt elit sunt. Qui
+              minim sit magna Lorem id et dolore velit Lorem amet exercitation duis deserunt. Anim id labore elit adipisicing ut in id occaecat pariatur ut ullamco ea tempor duis.</p>
+          </div>
+          <div class="tab-pane fade" id="video_content_tab.3" role="tabpanel">
+            <p>Est quis nulla laborum officia ad nisi ex nostrud culpa Lorem excepteur aliquip dolor aliqua irure ex. Nulla ut duis ipsum nisi elit fugiat commodo sunt reprehenderit laborum veniam eu veniam. Eiusmod minim exercitation fugiat irure ex
+              labore incididunt do fugiat commodo aliquip sit id deserunt reprehenderit aliquip nostrud. Amet ex cupidatat excepteur aute veniam incididunt mollit cupidatat esse irure officia elit do ipsum ullamco Lorem. Ullamco ut ad minim do mollit
+              labore ipsum laboris ipsum commodo sunt tempor enim incididunt. Commodo quis sunt dolore aliquip aute tempor irure magna enim minim reprehenderit. Ullamco consectetur culpa veniam sint cillum aliqua incididunt velit ullamco sunt ullamco
+              quis quis commodo voluptate. Mollit nulla nostrud adipisicing aliqua cupidatat aliqua pariatur mollit voluptate voluptate consequat non.</p>
+          </div>
+          <div class="tab-pane fade" id="video_content_tab.4" role="tabpanel">
+            <p>Est quis nulla laborum officia ad nisi ex nostrud culpa Lorem excepteur aliquip dolor aliqua irure ex. Nulla ut duis ipsum nisi elit fugiat commodo sunt reprehenderit laborum veniam eu veniam. Eiusmod minim exercitation fugiat irure ex
+              labore incididunt do fugiat commodo aliquip sit id deserunt reprehenderit aliquip nostrud. Amet ex cupidatat excepteur aute veniam incididunt mollit cupidatat esse irure officia elit do ipsum ullamco Lorem. Ullamco ut ad minim do mollit
+              labore ipsum laboris ipsum commodo sunt tempor enim incididunt. Commodo quis sunt dolore aliquip aute tempor irure magna enim minim reprehenderit. Ullamco consectetur culpa veniam sint cillum aliqua incididunt velit ullamco sunt ullamco
+              quis quis commodo voluptate. Mollit nulla nostrud adipisicing aliqua cupidatat aliqua pariatur mollit voluptate voluptate consequat non.</p>
+          </div>
+        </div>
+        <div class="row"></div>
+
+
+      </div>
+
+
+      <div class="col offset-3"></div>
+    </div>
+
+
+  </div>
+  <div class="w-100"></div>
+  <script src="bootstrap/5/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+  <div class="sidebar-sticky">
+  </div>
+</body>
+
+</html>

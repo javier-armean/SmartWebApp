@@ -1,0 +1,115 @@
+{
+  "direct": true,
+  "type": "mysql",
+  "connection": {
+    "host": "localhost",
+    "port": 9906,
+    "user": "root",
+    "password": "eKiIM5yP",
+    "database": "jt"
+  },
+  "schema": {
+    "tables": {
+      "nav-click": {
+        "db": {
+          "engine": "InnoDB",
+          "schema": "jt",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        "columns": {
+          "id": {
+            "db": {
+              "type": "increments",
+              "primary": true,
+              "nullable": false
+            }
+          },
+          "navstatedb": {
+            "db": {
+              "type": "integer",
+              "primary": false,
+              "nullable": true
+            }
+          }
+        }
+      },
+      "users": {
+        "db": {
+          "engine": "InnoDB",
+          "schema": "jt",
+          "collation": "utf8_general_ci"
+        }
+      },
+      "countries": {
+        "db": {
+          "engine": "InnoDB",
+          "schema": "jt",
+          "collation": "utf8_general_ci"
+        }
+      },
+      "images": {
+        "db": {
+          "engine": "InnoDB",
+          "schema": "jt",
+          "collation": "utf8_general_ci"
+        },
+        "columns": {
+          "id": {
+            "db": {
+              "type": "increments",
+              "primary": true,
+              "nullable": false
+            }
+          },
+          "image": {
+            "db": {
+              "type": "string",
+              "maxLength": 50,
+              "primary": false,
+              "nullable": true
+            }
+          },
+          "description": {
+            "db": {
+              "type": "text",
+              "maxLength": 65535,
+              "primary": false,
+              "nullable": true
+            }
+          },
+          "category": {
+            "db": {
+              "type": "string",
+              "maxLength": 12,
+              "primary": false,
+              "nullable": true
+            }
+          },
+          "author": {
+            "db": {
+              "type": "string",
+              "maxLength": 50,
+              "primary": false,
+              "nullable": true
+            }
+          },
+          "date": {
+            "db": {
+              "type": "date",
+              "primary": false,
+              "nullable": true
+            }
+          }
+        }
+      },
+      "cars": {
+        "db": {
+          "engine": "InnoDB",
+          "schema": "jt",
+          "collation": "utf8_general_ci"
+        }
+      }
+    },
+    "views": {}
+  }
+}

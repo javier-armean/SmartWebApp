@@ -1,0 +1,14 @@
+{
+  "video-content.html": {
+    "description": ""
+  },
+  "video-content.ejs": {
+    "description": ""
+  },
+  "video-share.ejs": {
+    "description": "Partial used to share video lessons\n"
+  },
+  "video-sharing.ejs": {
+    "description": "Partial where you can share a video lesson"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "bootstrap5": {
+    "basic": {
+      "theme": "Signal",
+      "primary": "#FCE5F2",
+      "secondary": "#CACACA",
+      "success": "#015668",
+      "danger": "#06648C",
+      "info": "#0F81C7",
+      "warning": "#0DE2EA",
+      "light": "#ececec",
+      "dark": "#222222",
+      "link-color": "#8F95A8",
+      "headings-font-family": "Comfortaa",
+      "font-family-base": "Nunito",
+      "border-width": "3px",
+      "border-radius": "0",
+      "font-size-base": "0.85"
+    },
+    "advanced": {
+      "gray-300": "#e0e0e0"
+    }
+  }
+}

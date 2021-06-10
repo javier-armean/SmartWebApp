@@ -1,0 +1,54 @@
+{
+  "projectName": "JT",
+  "styleFile": "/css/style.css",
+  "assetsFolder": "/assets",
+  "designFramework": "bootstrap5",
+  "frameworks": [
+    {
+      "name": "jquery_slim_33",
+      "type": "cdn"
+    },
+    {
+      "name": "fontawesome_4",
+      "type": "cdn"
+    },
+    {
+      "name": "appConnect",
+      "type": "local"
+    },
+    {
+      "name": "bootstrap5",
+      "type": "local"
+    },
+    {
+      "name": "bootstrap_icons",
+      "type": "local"
+    }
+  ],
+  "hostingType": "docker",
+  "projectServerModel": "node",
+  "webRootFolder": "/public",
+  "useRouting": true,
+  "addBase": true,
+  "routingHandler": "node",
+  "targets": [
+    {
+      "name": "Development",
+      "remoteURL": "http://localhost:8100",
+      "webServerPort": 8100,
+      "webServerLang": "node",
+      "targetType": "docker",
+      "webServer": "node",
+      "NodeVersion": "12",
+      "databaseType": "mysql",
+      "databasePort": 9906,
+      "mySQLVersion": "8.0.x",
+      "mySQL_rootPassword": "eKiIM5yP",
+      "mySQL_databaseName": "jt",
+      "mySQL_username": "db_user",
+      "mySQL_password": "6tfugTbO"
+    }
+  ],
+  "activeTarget": "Development",
+  "projectType": "web"
+}
