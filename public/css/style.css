@@ -1,13 +1,133 @@
-.nav flex-column>.active>a {
-            background-color: #C0C0C0;
-            color: green;
-        }
-ul.nav.flex-column {
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    border-left: 5px solid #e6007e;
+    font-weight: bold;
+    color: black
+}
+
+li.nav-item {
+}
+@media (min-width: 1400px) {
+.style1 {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+            }
+.style2 {
+                        margin-bottom: 1rem;
+                        margin-right: 25px;
+            }
+.style3 {
+                        margin-right: 10px;
+            }
+.style4 {
+        display: inline-block;
+        background-color: #FFFFFF
+    }
+.icon_style {
+        border-width: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: #FFFFFF;
+        font-size: 18px;
+        margin: 10px;
+        padding: 3px 6px
+    }
+.style6 {
+        margin-right: 0px
+    }
+}
+.wappler-temp {
+}
+.wappler-temp {
 }
 #navinfo {
-            border-right-color: blue;
 }
-#navnotes {
+.wappler-temp {
 }
-li.nav-item {
+.wappler-temp {
+}
+.wappler-temp {
+}
+.icon_style {
+    font-size: 18px;
+    border-width: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: #FFFFFF;
+    margin-left: 9px;
+    margin-right: 9px;
+    padding: 3px 6px;
+    color: 
+}
+.wappler-temp {
+}
+.wappler-temp {
+}
+.navstyle {
+}
+.videotoolstyle {
+    margin-left: 10px;
+    margin-right: 10px
+}
+.videop_style {
+}
+.paragraph_style1 {
+    margin-left: 0px;
+    margin-right: 10px;
+    padding-right: 0px
+}
+.style5 {
+    margin-left: 20px;
+    margin-right: 10px
+}
+.icon_style2 {
+    margin-left: 20px;
+    margin-right: 10px
+}
+.icon_style1 {
+    margin-left: 5px;
+    margin-right: 20px
+}
+#nav_bar_col {
+    max-width: 100%;
+    white-space:nowrap; 
+}
+.column_fixed {
+    max-width: 75%
+}
+.tab_content_style {
+    margin-left: 10px;
+    margin-right: 9px
+}
+#video_content_col {
+    text-align: top 
+}
+#tab_info {
+    max-width: 100% 
+}
+#video_content_tab {
+    max-width: 100%
+}
+@media (min-width: 1200px) {
+.icon_style {
+        color: #8f95a8
+    }
+.style7 {
+        padding-top: 0px;
+        padding-left: 20px;
+        padding-right: 20px
+    }
+.column_fixed {
+        margin-right: 20px
+    }
+.style8 {
+        margin-right: 20px
+    }
+}
+.wappler-temp {
 }

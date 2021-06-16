@@ -26,6 +26,8 @@
 
 <body is="dmx-app" id="Main">
 
+  <dmx-value id="query_lesson_name" dmx-bind:value="'First Video Lesson'"></dmx-value>
+
 
 
   <dmx-value id="nav_state"></dmx-value>
@@ -35,80 +37,94 @@
   </div>
 
 
-  <div class="container-fluid px-0">
-    <div class="row">
+  <div class="container-fixed px-0">
+  </div>
+  <div class="container-fluid">
+    <div class="row align-items-xxl-center">
 
 
-      <div class="col-xl-1 col-4">
+      <div class="col-3 column_fixed col-xxl-3 col-xl-2 p-0">
       </div>
-      <div class="col col d-flex justify-content-start align-items-center" id="video_rating_col">
-        <p><b>Rate this session</b></p>
-        <%- await include('/partials/video-rating', Object.assign({}, locals)) %>
-      </div>
-      <div class="col col d-flex justify-content-start flex-row align-items-center" id="video_sharing_col">
-        <p><b>Share</b></p>
-        <%- await include('/partials/video-sharing', Object.assign({}, locals)) %>
+      <div class="d-flex flex-row align-items-center align-self-xxl-center align-items-xxl-center col align-self-center mt-2 mb-2 border-bottom rounded-1 border-secondary col-xxl col-xl style7" id="video_tools">
+        <p id="rating_text" class="paragraph_style1"><b style="">Rate this session</b></p>
+        <p id="rating_icon" class="icon_style1"><i class="bi-star"></i>
+          &nbsp;&nbsp;
+          <i class="bi-star"></i>
+          &nbsp;&nbsp;
+          <i class="bi-star"></i></p>
+        <p id="sharing_icon" class="icon_style2"><i class="bi-share"></i></p>
+        <p id="sharing_text"><b style="">Share</b></p>
       </div>
 
 
-      <div class="col 11 d-flex"></div>
+
+      <div class="offset-3 col-3 col-xxl-3 ms-xl-0 ps-xl-0 col-xl-3 offset-xl-2"></div>
     </div>
+  </div>
+  <div class="container-fluid">
+
     <div class="row">
 
 
-      <div class="col-xl-1 col-4" id="nav_bar_col">
-        <ul class="nav flex-column nav-pills nav-flush;">
+      <div class="col-3 col-xxl-3 p-0 style8 col-xl-2" id="nav_bar_col">
+        <ul class="nav flex-column nav-pills nav-flush; navstyle">
           <li class="nav-item">
-            <a class="nav-link text-start" style="cursor: pointer;" data-bs-toggle="tab" id="navinfo" dmx-on:click="nav_state.setValue(1)" internal="" href="/JT1" data-bs-target="#video_content_tab.1" aria-current="Page"><i class="bi-info-circle"
-                id="nav-icon"></i>&nbsp;Info</a>
+            <a class="nav-link text-start active" style="cursor: pointer;" data-bs-toggle="tab" id="navinfo" dmx-on:click="nav_state.setValue(1)" data-bs-target="#tab_info" aria-current="Page" target="_blank"><i class="bi-info-circle icon_style"
+                id="nav-icon1"></i>&nbsp;Info</a>
           </li>
           <li class="nav-item" style="">
-            <a class="nav-link" id="navnotes" dmx-on:click="nav_state.setValue(2)" internal="" href="/JT1" data-bs-toggle="tab" data-bs-target="#video_content_tab.2"><i class="bi-journal-bookmark-fill"></i>&nbsp;Notes
-
-
-            </a>
+            <a class="nav-link" id="navnotes" dmx-on:click="nav_state.setValue(2)" data-bs-toggle="tab" data-bs-target="#tab_notes" target="_blank"><i class="bi-journal-bookmark-fill icon_style"></i>&nbsp;Notes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" style="cursor: pointer;" id="navdownloads" dmx-on:click="nav_state.setValue(3)" internal="" href="/JT1" data-bs-toggle="tab" data-bs-target="#video_content_tab.3"><i class="bi-file-earmark-image"></i>&nbsp;Downloads
-
-            </a>
+            <a class="nav-link" style="cursor: pointer;" id="navdownloads" dmx-on:click="nav_state.setValue(3)" data-bs-toggle="tab" data-bs-target="#tab_downloads"><i class="bi-file-earmark-image icon_style"></i>&nbsp;Downloads</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="navassignments" dmx-on:click="nav_state.setValue(4)" internal="" href="/JT1" data-bs-toggle="tab" data-bs-target="#video_content_tab.4"><i class="bi-pencil-square"></i>&nbsp;Assignments
-
-            </a>
+            <a class="nav-link" id="navassignments" dmx-on:click="nav_state.setValue(4)" data-bs-toggle="tab" data-bs-target="#tab_assignments"><i class="bi-pencil-square icon_style"></i>&nbsp;Assignments</a>
           </li>
         </ul>
       </div>
-      <div class="col col d-flex justify-content-start flex-row align-items-center" id="video_content_col">
-        <div class="tab-content" id="video_content_tab">
-          <div class="tab-pane fade show active" id="video_content_tab.1" role="tabpanel">
-            <%- await include('/partials/video-content', Object.assign({}, locals)) %></div>
-          <div class="tab-pane fade" id="video_content_tab.2" role="tabpanel">
-            <p>Ad pariatur nostrud pariatur exercitation ipsum ipsum culpa mollit commodo mollit ex. Aute sunt incididunt amet commodo est sint nisi deserunt pariatur do. Aliquip ex eiusmod voluptate exercitation cillum id incididunt elit sunt. Qui
-              minim sit magna Lorem id et dolore velit Lorem amet exercitation duis deserunt. Anim id labore elit adipisicing ut in id occaecat pariatur ut ullamco ea tempor duis.</p>
+      <div class="d-flex flex-row align-items-center col justify-content-start col-xxl align-items-xl-start col-xl" id="video_content_col" style="">
+        <div class="row align-items-xl-start">
+          <div class="col-xl-12">
+            <h3>
+              {{query_lesson_name.value}}</h3>
           </div>
-          <div class="tab-pane fade" id="video_content_tab.3" role="tabpanel">
-            <p>Est quis nulla laborum officia ad nisi ex nostrud culpa Lorem excepteur aliquip dolor aliqua irure ex. Nulla ut duis ipsum nisi elit fugiat commodo sunt reprehenderit laborum veniam eu veniam. Eiusmod minim exercitation fugiat irure ex
-              labore incididunt do fugiat commodo aliquip sit id deserunt reprehenderit aliquip nostrud. Amet ex cupidatat excepteur aute veniam incididunt mollit cupidatat esse irure officia elit do ipsum ullamco Lorem. Ullamco ut ad minim do mollit
-              labore ipsum laboris ipsum commodo sunt tempor enim incididunt. Commodo quis sunt dolore aliquip aute tempor irure magna enim minim reprehenderit. Ullamco consectetur culpa veniam sint cillum aliqua incididunt velit ullamco sunt ullamco
-              quis quis commodo voluptate. Mollit nulla nostrud adipisicing aliqua cupidatat aliqua pariatur mollit voluptate voluptate consequat non.</p>
-          </div>
-          <div class="tab-pane fade" id="video_content_tab.4" role="tabpanel">
-            <p>Est quis nulla laborum officia ad nisi ex nostrud culpa Lorem excepteur aliquip dolor aliqua irure ex. Nulla ut duis ipsum nisi elit fugiat commodo sunt reprehenderit laborum veniam eu veniam. Eiusmod minim exercitation fugiat irure ex
-              labore incididunt do fugiat commodo aliquip sit id deserunt reprehenderit aliquip nostrud. Amet ex cupidatat excepteur aute veniam incididunt mollit cupidatat esse irure officia elit do ipsum ullamco Lorem. Ullamco ut ad minim do mollit
-              labore ipsum laboris ipsum commodo sunt tempor enim incididunt. Commodo quis sunt dolore aliquip aute tempor irure magna enim minim reprehenderit. Ullamco consectetur culpa veniam sint cillum aliqua incididunt velit ullamco sunt ullamco
-              quis quis commodo voluptate. Mollit nulla nostrud adipisicing aliqua cupidatat aliqua pariatur mollit voluptate voluptate consequat non.</p>
+          <div class="col-xl-12">
+            <div class="tab-content" id="video_content_tab">
+              <div class="tab-pane fade show active tabstyle" id="tab_info" role="tabpanel" aria-labelledby="navinfo">
+
+                <p> Text info <br>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias facilis fuga commodi, velit labore amet nobis eum voluptas totam, earum ratione rerum distinctio iusto temporibus perspiciatis facere deleniti tempora cum.</p>
+              </div>
+              <div class="tab-pane fade" id="tab_notes" role="tabpanel" aria-labelledby="navnotes">
+                <p>Text notes</p>
+              </div>
+              <div class="tab-pane fade" id="tab_downloads" role="tabpanel" aria-labelledby="navdownloads">
+                <p>Text Downloads</p>
+              </div>
+              <div class="tab-pane fade" id="tab_assignments" role="tabpanel" aria-labelledby="navassignments">
+                <p>Text Assignments</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="row"></div>
+
+
+
+
 
 
       </div>
 
 
-      <div class="col offset-3"></div>
+      <div class="offset-3 col-3 col-xxl-3 ms-xl-0 ps-xl-0 col-xl-3 offset-xl-2"></div>
     </div>
+
+
+  </div>
+  <div class="container-fixed px-0">
+
+
 
 
   </div>
