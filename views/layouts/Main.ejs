@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="fontawesome5/css/all.min.css" />
   <link rel="stylesheet" href="dmxAppConnect/dmxAnimateCSS/animate.min.css" />
   <script src="dmxAppConnect/dmxAnimateCSS/dmxAnimateCSS.js" defer=""></script>
+  <script src="dmxAppConnect/dmxBootstrap5Collapse/dmxBootstrap5Collapse.js" defer=""></script>
 </head>
 
 <body is="dmx-app" id="Main">
@@ -93,8 +94,22 @@
             <div class="tab-content" id="video_content_tab">
               <div class="tab-pane fade show active tabstyle" id="tab_info" role="tabpanel" aria-labelledby="navinfo">
 
+
                 <p> Text info <br>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias facilis fuga commodi, velit labore amet nobis eum voluptas totam, earum ratione rerum distinctio iusto temporibus perspiciatis facere deleniti tempora cum.</p>
+                <div class="card style9">
+                  <div class="card-header style11" id="card1_heading">
+                    <h5 class="mb-0 style10"><button id="card1_collapse_Btn" class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#card1_collapse" aria-expanded="true" aria-controls="collapse" wappler-command="editContent">
+                        See more</button></h5>
+                  </div>
+                  <div id="card1_collapse" class="collapse" is="dmx-bs5-collapse" aria-labelledby="card1_heading" data-bs-parent="">
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                      tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+                      lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="tab-pane fade" id="tab_notes" role="tabpanel" aria-labelledby="navnotes">
                 <p>Text notes</p>
